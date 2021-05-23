@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessaryView" customModule="Sorena" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="ln1-bM-ZEZ" id="bY0-fF-ppn"/>
+                <outlet property="sendButton" destination="hzV-Ie-bQG" id="Yjn-SD-m19"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" scrollEnabled="NO" text="メッセージがここに入る" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-bM-ZEZ">
+                    <rect key="frame" x="10" y="10" width="336" height="112"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-Ie-bQG">
+                    <rect key="frame" x="356" y="42" width="48" height="48"/>
+                    <state key="normal" image="send"/>
+                    <connections>
+                        <action selector="tappedSendButton:" destination="-1" eventType="touchUpInside" id="QLy-A4-D1M"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ln1-bM-ZEZ" secondAttribute="bottom" constant="10" id="6o7-Fx-bIZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hzV-Ie-bQG" secondAttribute="trailing" constant="10" id="E3z-UP-YhF"/>
+                <constraint firstItem="hzV-Ie-bQG" firstAttribute="centerY" secondItem="ln1-bM-ZEZ" secondAttribute="centerY" id="Lv8-Yk-9qs"/>
+                <constraint firstItem="ln1-bM-ZEZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Mb5-rm-0d6"/>
+                <constraint firstItem="hzV-Ie-bQG" firstAttribute="leading" secondItem="ln1-bM-ZEZ" secondAttribute="trailing" constant="10" id="WgH-aJ-BkB"/>
+                <constraint firstItem="ln1-bM-ZEZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cPr-rU-XA4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="send" width="48" height="48"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

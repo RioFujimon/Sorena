@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="dKc-z0-zTo" customClass="ChatRoomTableViewCell" customModule="Sorena" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKc-z0-zTo" id="DrP-QP-WoL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-ud-orZ">
+                        <rect key="frame" x="10" y="50" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rXN-ud-orZ" secondAttribute="height" multiplier="1:1" id="nNZ-Gf-RUz"/>
+                            <constraint firstAttribute="width" constant="60" id="vBE-f0-FSg"/>
+                        </constraints>
+                    </imageView>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージ" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHt-42-6sj">
+                        <rect key="frame" x="80" y="15" width="250" height="130"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="xYb-I3-BgO"/>
+                        </constraints>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージ" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ein-8f-zEH">
+                        <rect key="frame" x="159" y="15" width="240" height="130"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.59607843137254901" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="PEo-i2-5B4"/>
+                        </constraints>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCo-Xn-Hwd">
+                        <rect key="frame" x="115" y="117" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amB-B2-8we">
+                        <rect key="frame" x="338" y="117" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ein-8f-zEH" secondAttribute="bottom" constant="15" id="5n1-Qm-cC2"/>
+                    <constraint firstAttribute="bottom" secondItem="zHt-42-6sj" secondAttribute="bottom" constant="15" id="FgW-FT-hJC"/>
+                    <constraint firstItem="rXN-ud-orZ" firstAttribute="leading" secondItem="DrP-QP-WoL" secondAttribute="leading" constant="10" id="RHC-y2-L0J"/>
+                    <constraint firstItem="zHt-42-6sj" firstAttribute="leading" secondItem="rXN-ud-orZ" secondAttribute="trailing" constant="10" id="T6s-qo-4cm"/>
+                    <constraint firstItem="ein-8f-zEH" firstAttribute="leading" secondItem="RCo-Xn-Hwd" secondAttribute="trailing" constant="8" id="Zrl-cl-3Ib"/>
+                    <constraint firstAttribute="trailing" secondItem="ein-8f-zEH" secondAttribute="trailing" constant="15" id="a5y-Et-LFa"/>
+                    <constraint firstItem="amB-B2-8we" firstAttribute="leading" secondItem="zHt-42-6sj" secondAttribute="trailing" constant="8" id="euz-cR-jUP"/>
+                    <constraint firstItem="zHt-42-6sj" firstAttribute="top" secondItem="DrP-QP-WoL" secondAttribute="top" constant="15" id="iBm-oO-ace"/>
+                    <constraint firstItem="rXN-ud-orZ" firstAttribute="centerY" secondItem="DrP-QP-WoL" secondAttribute="centerY" id="itb-sm-Yt9"/>
+                    <constraint firstItem="ein-8f-zEH" firstAttribute="top" secondItem="zHt-42-6sj" secondAttribute="top" id="mtO-yu-HlR"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RCo-Xn-Hwd" secondAttribute="bottom" constant="15" id="tkb-QQ-8Bb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="amB-B2-8we" secondAttribute="bottom" constant="15" id="uYk-gf-KmY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="messageTextViewWidthConstraint" destination="xYb-I3-BgO" id="21y-aa-vkH"/>
+                <outlet property="myDateLabel" destination="RCo-Xn-Hwd" id="fgf-oq-bHx"/>
+                <outlet property="myMessageTextView" destination="ein-8f-zEH" id="gda-5G-Ppf"/>
+                <outlet property="myMessageTextViewWidthConstraint" destination="PEo-i2-5B4" id="QVw-to-6af"/>
+                <outlet property="partnerDateLabel" destination="amB-B2-8we" id="sWd-57-TxO"/>
+                <outlet property="partnerMessageTextView" destination="zHt-42-6sj" id="p8l-f9-scF"/>
+                <outlet property="userImageView" destination="rXN-ud-orZ" id="VjB-8u-dqk"/>
+            </connections>
+            <point key="canvasLocation" x="-221.73913043478262" y="13.392857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
